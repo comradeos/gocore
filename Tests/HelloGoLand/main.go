@@ -1,5 +1,5 @@
 package HelloGoLand
 
 func main() {
-	println("Hsdlo World!")
+	println("Hello World!")
 }
