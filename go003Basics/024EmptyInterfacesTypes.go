@@ -13,9 +13,26 @@ func printType(value interface{}) {
 	}
 }
 
+func printType2(value interface{}) {
+	switch value.(type) {
+		case int:
+			f.Println("INT")
+		case string:
+			f.Println("INT")
+		default:
+			f.Println("I don't know")
+
+	}
+}
+
 func main() {
 	f.Println("Empty Interafcaces, type check")
 	printType(12)
 	printType("hello")
 	printType(true)
+	
+	printType2(12)
+	printType2("hello")
+	printType2(true)
+
 }
