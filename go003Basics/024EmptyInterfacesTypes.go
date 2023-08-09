@@ -21,7 +21,6 @@ func printType2(value interface{}) {
 			f.Println("INT")
 		default:
 			f.Println("I don't know")
-
 	}
 }
 
@@ -34,5 +33,4 @@ func main() {
 	printType2(12)
 	printType2("hello")
 	printType2(true)
-
 }
