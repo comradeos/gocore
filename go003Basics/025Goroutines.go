@@ -12,6 +12,7 @@ func someAction(name string, seconds int) {
 		fmt.Printf("Doing %s ...\n", name)
 		time.Sleep(time.Second * 1)
 	}
+	
 	timeSpent := time.Since(timeStart)
 	fmt.Printf("Action %s is done in %v!\n", name, timeSpent)
 }
