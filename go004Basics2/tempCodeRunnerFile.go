@@ -1,1 +1,1 @@
-age
+myStruct
