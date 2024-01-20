@@ -2,48 +2,56 @@ package main
 
 import (
 	"fmt"
+	// "time"
 )
 
-const myConstA = "A"
-
-func test() (int, int) {
-	var a int = 1
-	var b int = 2
-	return a, b
-}
-
-type myStruct struct {
-	a int
-	b int
-	c int
-}
-
-func test2() myStruct {
-	var a myStruct
-	a.a = 1
-	a.b = 2
-	a.c = 3
-	return a
-}
-
-func test3() (a, b, c int) {
-	a = 1
-	b = 2
-	c = 3
-	return
-}
-
-func test4() (int, int, int) {
-	a := 1222
-	b := 2222
-	c := 3222
-	return a, b, c
-}
-
 func main() {
-	fmt.Println(test());
-	var s = test2();
-	fmt.Println(s.a);
-	fmt.Println(test3());
-	fmt.Println(test4());
+	for i := 0; i < 10; i += 2 { // 0 2 4 6 8 
+		fmt.Printf("%d ", i)
+	}
+
+	fmt.Println()
+
+	var sum int = 0
+
+	for sum < 10 { // 5 10
+		sum += 5
+		fmt.Print(sum, " ")
+	}
+
+	fmt.Println()
+
+	var number int = 0
+
+	// for { бесконечный цикл
+	// 	number += 500
+	// 	fmt.Print(number, " ")
+	// 	time.Sleep(500 * time.Millisecond)
+	// }
+	
+	if number > 0 {
+		fmt.Println("number > 0")
+	} else {
+		fmt.Println("number <= 0")
+	}
+
+	if a := test(number); a == -1 {
+		fmt.Println("a == -1")
+	}
+
+	switch number {
+		case 0:
+			fmt.Println("number == 0")
+		case 1:
+			fmt.Println("number == 1")
+		default:
+			fmt.Println("number != 0 && number != 1")
+	}
+}
+
+func test(number int) int {
+	if number > 0 {
+		return 1
+	}
+	return -1
 }
