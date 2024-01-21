@@ -1,5 +1,7 @@
 https://www.youtube.com/watch?v=5MZWiUHdSBA&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXFiGl&index=2
 https://www.youtube.com/watch?v=0s3Jz8Y_cq8&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXFiGl&index=3
+https://www.youtube.com/watch?v=NmNjOiKHQt4&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXFiGl&index=4
+
 
 $env:GOOS = "darwin"
 $env:GOARCH = "arm64"
