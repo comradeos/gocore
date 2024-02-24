@@ -6,6 +6,8 @@ https://www.youtube.com/watch?v=uixi3pH0fgw&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXF
 https://www.youtube.com/watch?v=a3Byzdiey9Y&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXFiGl&index=7
 https://www.youtube.com/watch?v=N1cNNy0G2Uo&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXFiGl&index=10
 https://www.youtube.com/watch?v=Uf95UPe3MEc&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXFiGl&index=11
+https://www.youtube.com/watch?v=-8eBVDATXxk&list=PLP19RjSHH4aE9pB77yT1PbXzftGsXFiGl&index=12
+
 
 
 $env:GOOS = "darwin"
