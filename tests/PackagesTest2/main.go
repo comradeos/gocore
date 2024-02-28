@@ -18,4 +18,5 @@ func main() {
 выполните следующую команду: go mod init packagesTest2
 Это создаст файл go.mod в вашем проекте с именем модуля packagesTest2.
 
+
 */
