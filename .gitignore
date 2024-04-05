@@ -1,2 +1,4 @@
 .DS_Store
 auto_commits.py
+bin
+.idea
