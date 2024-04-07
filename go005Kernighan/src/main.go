@@ -12,5 +12,9 @@ func main() {
 	//Chapters.ScanText()
 	//Chapters.Lissajous()
 	//Chapters.RandomBetween(1, 10)
-	Chapters.WebServer()
+	//Chapters.WebServer()
+	// Chapter 2
+	//Chapters.Flags()
+	//Chapters.Types()
+	Chapters.Task2p1()
 }
