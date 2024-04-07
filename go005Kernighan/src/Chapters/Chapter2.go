@@ -66,3 +66,7 @@ func Task2p1() {
 
 	fmt.Println()
 }
+
+func InitTest() {
+	fmt.Println("InitTest")
+}

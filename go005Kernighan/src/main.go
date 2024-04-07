@@ -1,6 +1,8 @@
 package main
 
-import "main/Chapters"
+import (
+	"main/Chapters"
+)
 
 func main() {
 	// Chapter 1
@@ -16,5 +18,6 @@ func main() {
 	// Chapter 2
 	//Chapters.Flags()
 	//Chapters.Types()
-	Chapters.Task2p1()
+	//Chapters.Task2p1()
+	Chapters.InitTest()
 }
