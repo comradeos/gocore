@@ -1,4 +1,4 @@
-package Chapters
+package chapters
 
 import (
 	"bufio"
@@ -6,6 +6,7 @@ import (
 	"fmt"
 	"log"
 	"os"
+	"path/filepath"
 	"strconv"
 	"strings"
 )
@@ -69,4 +70,61 @@ func Task2p1() {
 
 func InitTest() {
 	fmt.Println("InitTest")
+}
+
+func BitOperations() {
+	x := 5
+	fmt.Println(x)
+	x = x << 1
+	fmt.Println(x)
+	x = x >> 2
+	fmt.Println(x)
+}
+
+func Scopes() {
+	x := 1
+	fmt.Println(x)
+
+	for i := range 10 {
+		fmt.Println(x)
+		fmt.Println(i)
+	}
+
+	for i := 10; i < 100; i += 10 {
+		fmt.Println(i)
+	}
+}
+
+func Files() {
+	ex, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+
+	exPath := filepath.Dir(ex)
+	err = os.Chdir(exPath)
+
+	if err != nil {
+		panic(err)
+	}
+
+	fmt.Println(os.Getwd())
+	file, err := os.Open("files/FileA.txt")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+
+	defer func(file *os.File) {
+		var err = file.Close()
+		if err != nil {
+			fmt.Println(err)
+		}
+	}(file)
+
+	scanner := bufio.NewScanner(file)
+	for scanner.Scan() {
+		fmt.Println(scanner.Text())
+	}
+
 }
