@@ -3,6 +3,7 @@ package chapters
 import (
 	"crypto/sha256"
 	"fmt"
+	"time"
 )
 
 func DataTypes2() {
@@ -71,4 +72,19 @@ func LenCap() {
 	for range 20 {
 		showCap(&mySlice)
 	}
+}
+
+func Structs() {
+	type Employee struct {
+		ID        int
+		Name      string
+		Address   string
+		DoB       time.Time // Date of Birth
+		Position  string
+		Salary    int
+		ManagerID int
+	}
+
+	var emp1 Employee
+	fmt.Println(emp1)
 }

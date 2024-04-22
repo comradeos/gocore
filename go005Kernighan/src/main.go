@@ -35,5 +35,6 @@ func main() {
 
 	//test.UnderstandingContext()
 	//test.Interfaces()
-	chapters.LenCap()
+	//chapters.LenCap()
+	chapters.Structs()
 }
