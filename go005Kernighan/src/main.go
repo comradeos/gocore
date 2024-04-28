@@ -36,5 +36,12 @@ func main() {
 	//test.UnderstandingContext()
 	//test.Interfaces()
 	//chapters.LenCap()
-	chapters.Structs()
+	//chapters.Structs()
+	//chapters.Trees()
+	//chapters.Structs2()
+	//chapters.Jsons()
+	//chapters.Templates()
+
+	//Chapter 5
+	chapters.Functions()
 }
