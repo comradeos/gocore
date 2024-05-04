@@ -35,3 +35,12 @@ func Functions() {
 	s.Run()
 	MyRec(1)
 }
+
+func PanicsRecovers() {
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Recovered in f", r)
+		}
+	}()
+	panic("a problem")
+}

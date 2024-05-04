@@ -43,5 +43,10 @@ func main() {
 	//chapters.Templates()
 
 	//Chapter 5
-	chapters.Functions()
+	//chapters.Functions()
+	//chapters.PanicsRecovers()
+
+	//Chapter 6
+	//chapters.Methods()
+	chapters.Interfaces()
 }
