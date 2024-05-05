@@ -48,5 +48,11 @@ func main() {
 
 	//Chapter 6
 	//chapters.Methods()
-	chapters.Interfaces()
+	//chapters.Interfaces()
+
+	//chapters.Sorting()
+
+	//Chapter 8
+	//chapters.Goroutines()
+	chapters.Channels()
 }
