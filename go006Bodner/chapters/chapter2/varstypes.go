@@ -60,4 +60,17 @@ func TypesVars() {
 	myMap["three"] = 3
 	fmt.Println("myMap:", myMap)
 
+	var r rune = 'æ'
+	fmt.Println("r:", r)
+	fmt.Printf("r = %c\n", r)
+
+	fmt.Println("Complex")
+
+	var c1 complex64 = complex(2.5, 2.1)
+	var c2 complex64 = complex(1.1, 1.2)
+	fmt.Println(c1 - c2)
+
+	const myConst1 int = 123
+	//myConst1 = 222 //err
+	fmt.Println(myConst1)
 }
