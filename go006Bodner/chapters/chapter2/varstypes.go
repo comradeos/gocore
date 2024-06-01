@@ -1,6 +1,8 @@
 package chapter2
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func TypesVars() {
 	fmt.Println("Variables, Types")
@@ -73,4 +75,46 @@ func TypesVars() {
 	const myConst1 int = 123
 	//myConst1 = 222 //err
 	fmt.Println(myConst1)
+
+	var myIntArr1 [3]int
+	myIntArr1[0] = 1
+	fmt.Println(myIntArr1[0])
+	fmt.Println(myIntArr1[1])
+	fmt.Println(myIntArr1[2])
+
+	var myIntArr2 = [3]int{1, 2, 3}
+	fmt.Println(myIntArr2)
+
+	var myIntArr3 = [10]int{1, 1: 7, 9: 10}
+	fmt.Println(myIntArr3)
+
+	var myIntArr4 = [...]int{1, 2, 3}
+	fmt.Println(myIntArr4)
+
+	//Slices
+	var mySlice1 = []int{1, 2, 3}
+	fmt.Println(mySlice1)
+
+	var mySlice2 = make([]int, 2, 4)
+	fmt.Println(mySlice2)
+
+	mySlice2[0] = 25
+	mySlice2[1] = 50
+	mySlice2 = append(mySlice2, 100)
+
+	fmt.Println(mySlice2)
+
+	var mySlice3 = []int{1, 2, 3, 4, 5}
+	r1 := mySlice3[1:3]
+	fmt.Println(r1)
+	r1 = mySlice3[:4]
+	fmt.Println(r1)
+	r1 = mySlice3[2:]
+	fmt.Println(r1)
+
+	var mySlice4 = []int{1, 2, 3, 4, 5}
+	r2 := mySlice4[0:3]   // [1 2 3]
+	r2[0] = 100           // изменение влияет на исходный срез
+	fmt.Println(mySlice4) // [100 2 3 4 5]
+
 }
