@@ -117,4 +117,18 @@ func TypesVars() {
 	r2[0] = 100           // изменение влияет на исходный срез
 	fmt.Println(mySlice4) // [100 2 3 4 5]
 
+	// строки
+	var myString1 = "Hello"
+	fmt.Println(myString1)
+
+	var sub1 = myString1[0:2]
+	sub1 = "a" + sub1[1:]
+
+	var myString2 string = "Hello ☀️"
+	fmt.Println(myString2)
+	var myString2Bytes = []byte(myString2)
+	fmt.Println(myString2Bytes)
+	var myString2Runes = []rune(myString2)
+	fmt.Println(myString2Runes)
+
 }
