@@ -10,4 +10,5 @@ func main() {
 	chapter2.TypesVars()
 	//tests.ST001Overload()
 	//tests.ST002NilsEquation()
+	chapter2.CompoundTypes()
 }
