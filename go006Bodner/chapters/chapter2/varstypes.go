@@ -131,4 +131,11 @@ func TypesVars() {
 	var myString2Runes = []rune(myString2)
 	fmt.Println(myString2Runes)
 
+	// maps
+	var myMap1 = make(map[string]int)
+	myMap1["a"] = 123
+	myMap1["b"] = 526
+	fmt.Println(myMap1)
+	fmt.Println(myMap1["a"])
+
 }
