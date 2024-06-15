@@ -11,4 +11,6 @@ func main() {
 	//tests.ST001Overload()
 	//tests.ST002NilsEquation()
 	chapter2.CompoundTypes()
+	chapter2.Structs()
+
 }
