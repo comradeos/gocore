@@ -1,16 +1,19 @@
 package main
 
 import (
-	"go006Bodner/chapters/chapter2"
-	"go006Bodner/libraries/mylib1"
+	"go006Bodner/chapters/chapter_2"
+	"go006Bodner/chapters/chapter_4"
+	"go006Bodner/libraries/my_lib_1"
 )
 
 func main() {
-	mylib1.TestLib()
-	chapter2.TypesVars()
+	my_lib_1.TestLib()
+	chapter_2.TypesVars()
 	//tests.ST001Overload()
 	//tests.ST002NilsEquation()
-	chapter2.CompoundTypes()
-	chapter2.Structs()
-
+	chapter_2.CompoundTypes()
+	chapter_2.Structs()
+	chapter_4.Shadowing()
+	chapter_4.OperatorIf()
+	chapter_4.ForTypes()
 }

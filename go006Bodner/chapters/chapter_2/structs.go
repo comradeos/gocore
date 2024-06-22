@@ -1,9 +1,12 @@
-package chapter2
+package chapter_2
 
-import "fmt"
+import (
+	"fmt"
+	"go006Bodner/chapters/helper"
+)
 
 func Structs() {
-	Line()
+	helper.Line()
 	fmt.Println("Structs:")
 
 	type firstPerson struct {

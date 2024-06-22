@@ -1,6 +1,9 @@
-package chapter2
+package chapter_2
 
-import "fmt"
+import (
+	"fmt"
+	"go006Bodner/chapters/helper"
+)
 
 type MyStruct struct {
 	Id   int
@@ -18,7 +21,7 @@ func CompoundTypes() {
 	pMyStruct1.Name = "Hello World"
 	fmt.Println(pMyStruct1)
 
-	Line()
+	helper.Line()
 
 	var myMap = make(map[string]int)
 	myMap["a"] = 123
