@@ -17,4 +17,5 @@ func main() {
 	chapter_4.OperatorIf()
 	chapter_4.ForTypes()
 	chapter_4.Labels()
+	chapter_4.Switches()
 }
