@@ -16,4 +16,5 @@ func main() {
 	chapter_4.Shadowing()
 	chapter_4.OperatorIf()
 	chapter_4.ForTypes()
+	chapter_4.Labels()
 }
