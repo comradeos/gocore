@@ -18,4 +18,6 @@ func main() {
 	chapter_4.ForTypes()
 	chapter_4.Labels()
 	chapter_4.Switches()
+	chapter_4.Goto()
+	chapter_4.ConsoleInput()
 }
