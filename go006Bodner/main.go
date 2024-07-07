@@ -3,6 +3,7 @@ package main
 import (
 	"go006Bodner/chapters/chapter_2"
 	"go006Bodner/chapters/chapter_4"
+	"go006Bodner/chapters/chapter_5"
 	"go006Bodner/libraries/my_lib_1"
 )
 
@@ -19,5 +20,6 @@ func main() {
 	chapter_4.Labels()
 	chapter_4.Switches()
 	chapter_4.Goto()
-	chapter_4.ConsoleInput()
+	//chapter_4.ConsoleInput()
+	chapter_5.Functions()
 }
