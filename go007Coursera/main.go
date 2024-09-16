@@ -8,5 +8,7 @@ import (
 func main() {
 	fmt.Println("Hello, World!")
 	Ch001DataTypes()
-	Ch001DataTypes2()
+	Ch002DataTypes2()
+	Ch003ControlStructures()
+	Ch004Functions()
 }

@@ -6,7 +6,7 @@ import (
 )
 
 func Ch001DataTypes() {
-	fmt.Println("Hello from Ch001DataTypes()")
+	fmt.Println("============== Hello from Ch001DataTypes() ==============")
 
 	var num0 int // 0 by default
 	var num1 int = 1
