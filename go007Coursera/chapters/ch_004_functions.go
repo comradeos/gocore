@@ -1,4 +1,4 @@
-package chpts
+package chapters
 
 import (
 	"fmt"
@@ -69,13 +69,16 @@ func Ch004Functions() {
 	fmt.Println(prefix("value"))
 
 	// defer
-	DeferExample()
+	//DeferExample()
 
 	// panic
 	//PanicExample()
 
 	// recover
-	RecoverExample()
+	//RecoverExample()
+	//RecoverExample2()
+
+	DeferPanicsTest()
 
 }
 
@@ -146,4 +149,36 @@ func RecoverExample() {
 		}
 	}()
 	panic("panic")
+}
+
+func RecoverExample2() {
+	defer func(a int) {
+		fmt.Println("the last", a)
+	}(25)
+
+	fmt.Println("some work.....")
+
+	panic("panic")
+}
+
+func DeferPanicsTest() {
+	defer func() {
+		fmt.Println("defer 1")
+	}()
+
+	defer func() {
+		fmt.Println("defer 2")
+	}()
+
+	defer func() {
+		fmt.Println("defer 3")
+	}()
+
+	defer func() {
+		if r := recover(); r != nil {
+			fmt.Println("Recovered from panic", r)
+		}
+	}()
+
+	panic("panic 1")
 }

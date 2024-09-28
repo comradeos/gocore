@@ -1,4 +1,4 @@
-package chpts
+package chapters
 
 import (
 	"fmt"

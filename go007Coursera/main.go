@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	. "go007Coursera/chpts"
+	. "go007Coursera/chapters"
 )
 
 func main() {
@@ -11,4 +11,9 @@ func main() {
 	Ch002DataTypes2()
 	Ch003ControlStructures()
 	Ch004Functions()
+	Ch005Structs()
+	Ch006Methods()
+	Ch007Visibility()
+	Ch008Interfaces()
+	Ch009EmptyInterface()
 }
