@@ -16,4 +16,6 @@ func main() {
 	Ch007Visibility()
 	Ch008Interfaces()
 	Ch009EmptyInterface()
+	Ch010InterfaceComposition()
+	Ch011StringUnique()
 }
