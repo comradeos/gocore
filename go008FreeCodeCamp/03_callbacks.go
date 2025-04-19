@@ -8,7 +8,6 @@ func callbacks() {
 	sep()
 
 	someFunction(5, 5, funcToCall)
-
 }
 
 func funcToCall() {

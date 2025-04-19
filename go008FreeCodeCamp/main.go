@@ -5,4 +5,7 @@ func main() {
 	variables()
 	functions()
 	callbacks()
+	structs()
+	methods()
+	interfaces()
 }
