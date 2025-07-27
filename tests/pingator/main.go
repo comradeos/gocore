@@ -38,6 +38,3 @@ func checkAddress(logger *log.Logger) {
 	conn.Close()
 	logger.Println("UP")
 }
-
-
-
