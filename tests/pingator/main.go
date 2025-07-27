@@ -39,3 +39,5 @@ func checkAddress(logger *log.Logger) {
 	logger.Println("UP")
 }
 
+
+
