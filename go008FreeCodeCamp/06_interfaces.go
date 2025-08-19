@@ -31,4 +31,3 @@ func interfaces() {
 
 	fmt.Println(square.area())
 }
-
