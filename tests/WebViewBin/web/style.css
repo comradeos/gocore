@@ -1,0 +1,225 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  color: #000000;
+  font-family: Arial, Helvetica, sans-serif;
+  overscroll-behavior: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+}
+
+/* ---------- HEADER ---------- */
+
+.header {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+    border-bottom: 1px solid #d0d0d0;
+    box-sizing: border-box;
+    background: #fff;
+    position: sticky;
+    top: 0;
+}
+
+.header-title {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.header-icons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* ---------- BURGER / CLOSE ---------- */
+
+.burger {
+  font-size: 32px;
+  cursor: pointer;
+  user-select: none;
+}
+
+/* ---------- CONTENT ---------- */
+
+.content {
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* ---------- FULLSCREEN MENU ---------- */
+
+.menu {
+  position: absolute;
+  top: 56px;
+  left: 0;
+  width: 100%;
+  height: calc(100% - 56px);
+  background: #ffffff;
+  transform: translateX(-100%);
+  transition: transform 0.25s ease;
+  box-sizing: border-box;
+}
+
+.menu.open {
+  transform: translateX(0);
+}
+
+.menu-section {
+  padding: 16px;
+  border-bottom: 1px solid #d0d0d0;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.menu-item {
+  margin: 16px;
+  padding: 16px;
+  font-size: 24px;
+  text-align: center;
+  border: 2px solid #cfcfcf;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.menu-item:active {
+  background: #eeeeee;
+}
+
+/* ---------- LOGIN FORM ---------- */
+
+.form {
+  max-width: 360px;
+  margin: 40px auto;
+}
+
+.form-group {
+  margin-bottom: 24px;
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.form-input {
+  width: 100%;
+  padding: 14px;
+  font-size: 20px;
+  box-sizing: border-box;
+  border: 2px solid #cfcfcf;
+  border-radius: 6px;
+}
+
+.form-button {
+  width: 100%;
+  padding: 16px;
+  font-size: 22px;
+  background: #ffffff;
+  border: 2px solid #cfcfcf;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.form-button:active {
+  background: #eeeeee;
+}
+
+
+/* ---------- KEYBOARD OVERLAY ---------- */
+
+.keyboard-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+/* INPUT FIELD */
+
+.keyboard-input {
+  margin: 16px;
+  padding: 16px;
+  font-size: 28px;
+  border: 2px solid #bdbdbd;
+  border-radius: 6px;
+  background: white;
+}
+
+/* KEYS GRID */
+
+.keyboard-keys {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  padding: 16px;
+  box-sizing: border-box;
+  overflow: auto;
+}
+
+.key {
+  font-size: 26px;
+  padding: 16px 0;
+  text-align: center;
+  border: 2px solid #bdbdbd;
+  border-radius: 6px;
+  background: white;
+  user-select: none;
+}
+
+.key:active {
+  background: #e0e0e0;
+}
+
+.key-wide {
+  grid-column: span 2;
+}
+
+.key-action {
+  background: #eaeaea;
+  font-weight: bold;
+}
+
+.keyboard-keys.rtl {
+  direction: rtl;
+}
+
+
+.card {
+  border: 1px solid #ccc;
+  padding: 16px;
+  margin: 16px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.value {
+  color: #333;
+}
+
+.error {
+  color: red;
+}
