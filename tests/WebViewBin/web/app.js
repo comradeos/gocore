@@ -155,6 +155,16 @@ function FullMenu({ open, onSelect }) {
     e("div", { className: "menu-item", onClick: () => onSelect("date") }, "Date & Time"),
     e("div", { className: "menu-item", onClick: () => onSelect("network") }, "Network"),
     e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
+    e("div", { className: "menu-item", onClick: () => onSelect("display") }, "Display"),
     e("div", { className: "menu-item", onClick: () => onSelect("test") }, "Test"),
   );
 }
