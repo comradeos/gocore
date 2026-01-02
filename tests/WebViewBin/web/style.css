@@ -1,13 +1,21 @@
-/* ---------- BASE ---------- */
+/* ================== BASE ================== */
+
+* {
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
 
 html, body {
   margin: 0;
   padding: 0;
   width: 100%;
   height: 100%;
+
   background: #ffffff;
   color: #000000;
   font-family: Arial, Helvetica, sans-serif;
+
   overscroll-behavior: none;
 }
 
@@ -16,21 +24,27 @@ html, body {
   height: 100%;
 }
 
-/* ---------- APP LAYOUT ---------- */
+/* ================== APP LAYOUT ================== */
 
 .app {
   width: 100%;
   height: 100%;
+
   display: flex;
   flex-direction: column;
+
   position: relative;
+  overflow: hidden;
 }
 
-/* ---------- HEADER ---------- */
+/* ================== HEADER ================== */
 
 .header {
   height: 56px;
-  flex-shrink: 0;
+  top: 0;
+
+  position: sticky;
+  z-index: 10;
 
   display: flex;
   align-items: center;
@@ -41,6 +55,8 @@ html, body {
 
   background: #ffffff;
   border-bottom: 1px solid #d0d0d0;
+
+  width: 100%;
 }
 
 .header-title {
@@ -54,25 +70,26 @@ html, body {
   gap: 12px;
 }
 
-/* ---------- BURGER ---------- */
-
 .burger {
   font-size: 32px;
   cursor: pointer;
   user-select: none;
 }
 
-/* ---------- CONTENT ---------- */
+/* ================== CONTENT ================== */
 
 .content {
-  flex: 1;
   overflow-y: auto;
-
-  padding: 24px;
+  overflow-x: hidden;
+  /* padding: 24px; */
   box-sizing: border-box;
+  position: fixed;
+  top: 56px;
+  max-height: 500px;
+    width: 100%;
 }
 
-/* ---------- FULLSCREEN MENU ---------- */
+/* ================== FULLSCREEN MENU ================== */
 
 .menu {
   position: absolute;
@@ -87,6 +104,8 @@ html, body {
   transition: transform 0.25s ease;
 
   overflow-y: auto;
+  overflow-x: hidden;
+
   -webkit-overflow-scrolling: touch;
 
   box-sizing: border-box;
@@ -121,7 +140,7 @@ html, body {
   background: #eeeeee;
 }
 
-/* ---------- LOGIN FORM ---------- */
+/* ================== LOGIN FORM ================== */
 
 .form {
   max-width: 360px;
@@ -148,7 +167,7 @@ html, body {
   border-radius: 6px;
 }
 
-/* ---------- KEYBOARD OVERLAY ---------- */
+/* ================== KEYBOARD OVERLAY ================== */
 
 .keyboard-overlay {
   position: absolute;
@@ -159,9 +178,9 @@ html, body {
 
   display: flex;
   flex-direction: column;
-}
 
-/* INPUT FIELD */
+  overflow: hidden;
+}
 
 .keyboard-input {
   margin: 16px;
@@ -174,10 +193,11 @@ html, body {
   background: #ffffff;
 }
 
-/* KEYS GRID */
-
 .keyboard-keys {
-  flex: 1;
+  flex: 1 1 auto;
+
+  min-height: 0;      /* ⬅️ ТОЖЕ ОБЯЗАТЕЛЬНО */
+  min-width: 0;
 
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -187,8 +207,12 @@ html, body {
   box-sizing: border-box;
 
   overflow-y: auto;
+  overflow-x: hidden;
+
   -webkit-overflow-scrolling: touch;
 }
+
+/* ================== KEYS ================== */
 
 .key {
   font-size: 26px;
@@ -219,7 +243,7 @@ html, body {
   direction: rtl;
 }
 
-/* ---------- CARDS ---------- */
+/* ================== CARDS ================== */
 
 .card {
   border: 1px solid #ccc;

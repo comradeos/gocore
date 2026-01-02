@@ -28,7 +28,7 @@ func main() {
 	defer w.Destroy()
 
 	w.SetTitle("")
-	w.SetSize(800, 600, webview.HintNone)
+	w.SetSize(1920, 1200, webview.HintNone)
 	w.Navigate("http://127.0.0.1:8080")
 	w.Run()
 }
