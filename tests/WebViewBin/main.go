@@ -9,19 +9,16 @@ import (
 	webview "github.com/webview/webview_go"
 )
 
-//go:embed web/*
 var webFS embed.FS
 
 func main() {
-	// создаём fs только для папки web
 	sub, err := fs.Sub(webFS, "web")
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// HTTP сервер ИЗ БИНАРЯ
 	go func() {
-		log.Fatal(http.ListenAndServe("127.0.0.1:8080", http.FileServer(http.FS(sub))))
+		log.Fatal(http.ListenAndServe("127.0.0.1:13000", http.FileServer(http.FS(sub))))
 	}()
 
 	w := webview.New(false)
@@ -29,6 +26,6 @@ func main() {
 
 	w.SetTitle("")
 	w.SetSize(1920, 1200, webview.HintNone)
-	w.Navigate("http://127.0.0.1:8080")
+	w.Navigate("http://127.0.0.1:13000")
 	w.Run()
 }
