@@ -2,19 +2,50 @@ package main
 
 import (
 	"fmt"
+	"strings"
 )
 
-//TIP <p>To run your code, right-click the code and select <b>Run</b>.</p> <p>Alternatively, click
-// the <icon src="AllIcons.Actions.Execute"/> icon in the gutter and select the <b>Run</b> menu item from here.</p>
-func main() {
-	//TIP <p>Press <shortcut actionId="ShowIntentionActions"/> when your caret is at the underlined text
-	// to see how GoLand suggests fixing the warning.</p><p>Alternatively, if available, click the lightbulb to view possible fixes.</p>
-	s := "gopher"
-	fmt.Printf("Hello and welcome, %s!\n", s)
+type GreetingReport struct {
+	Name             string
+	NormalizedName   string
+	NameLength       int
+	UppercaseLetters int
+}
 
-	for i := 1; i <= 5; i++ {
-		//TIP <p>To start your debugging session, right-click your code in the editor and select the Debug option.</p> <p>We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-		// for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.</p>
-		fmt.Println("i =", 100/i)
+func BuildGreetingReport(name string) GreetingReport {
+	normalized := strings.TrimSpace(name)
+	if normalized == "" {
+		normalized = "gopher"
 	}
+
+	return GreetingReport{
+		Name:             name,
+		NormalizedName:   normalized,
+		NameLength:       len([]rune(normalized)),
+		UppercaseLetters: countUppercaseLetters(normalized),
+	}
+}
+
+func countUppercaseLetters(value string) int {
+	count := 0
+	for _, r := range value {
+		if 'A' <= r && r <= 'Z' {
+			count++
+		}
+	}
+	return count
+}
+
+func FormatGreeting(report GreetingReport) string {
+	return fmt.Sprintf(
+		"Hello, %s! Your name has %d characters and %d uppercase letter(s).",
+		report.NormalizedName,
+		report.NameLength,
+		report.UppercaseLetters,
+	)
+}
+
+func main() {
+	report := BuildGreetingReport("gopher")
+	fmt.Println(FormatGreeting(report))
 }
