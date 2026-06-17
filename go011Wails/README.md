@@ -68,6 +68,18 @@ wails build
 
 The packaged app will be created in the Wails build output directories for your current platform.
 
+You can also use the helper scripts in this repository:
+
+```bash
+make build
+```
+
+On Windows:
+
+```bat
+build.bat
+```
+
 ## Testing on macOS, Windows, and Linux
 
 For the most reliable results, build and run the project on each target OS separately:
@@ -99,6 +111,7 @@ You can also automate this later with CI runners for each platform.
 ```bash
 wails doctor
 wails build -clean
+make doctor
 ```
 
 ## Official docs
