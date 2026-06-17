@@ -1,0 +1,28 @@
+html {
+    min-height: 100%;
+    background:
+        radial-gradient(circle at top left, rgba(255, 214, 179, 0.6), transparent 34%),
+        radial-gradient(circle at top right, rgba(152, 211, 223, 0.45), transparent 32%),
+        linear-gradient(180deg, #f7f2e9 0%, #efe5d3 100%);
+    color: #201611;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    color: #201611;
+    font-family: "Nunito", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+@font-face {
+    font-family: "Nunito";
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+    url("assets/fonts/nunito-v16-latin-regular.woff2") format("woff2");
+}
+
+#app {
+    min-height: 100vh;
+    text-align: center;
+}
