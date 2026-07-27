@@ -4,6 +4,8 @@ import(
     "fmt"
     "bufio"
     "os"
+    "strings"
+    "strconv"
 )
 
 func main(){
@@ -12,10 +14,12 @@ func main(){
     reader := bufio.NewReader(os.Stdin);
 
     input, _ := reader.ReadString('\n')
+    input = strings.TrimSpace(input)
 
-    numRating := int(input) + 1;
+    numRating, err := strconv.ParseInt(input, 10, 64);
 
-    println(numRating)
+    fmt.Println(numRating)
+    fmt.Println(err)
 
     
 
