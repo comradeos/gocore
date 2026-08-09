@@ -12,9 +12,10 @@ func main(){
     fmt.Printf("Please rate our pizza: ")
 
     reader := bufio.NewReader(os.Stdin);
-
+    
     input, _ := reader.ReadString('\n')
     input = strings.TrimSpace(input)
+    _ = strings.TrimSpace(input)
 
     numRating, err := strconv.ParseInt(input, 10, 64);
 
