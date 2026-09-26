@@ -13,12 +13,7 @@ func main() {
 	decoded, err := base64.StdEncoding.DecodeString(data)
 	
 	if err != nil {
-		fmt.Println("Error decoding base64:", err)
-		return
-	}
-
-	if len(decoded) != 8 {
-		fmt.Println("Error: decoded data is not 8 bytes long")
+		fmt.Println("b64:", err)
 		return
 	}
 
@@ -26,5 +21,5 @@ func main() {
 	
 	value := math.Float64frombits(bits)
 
-	fmt.Println("Converted double:", value)
+	fmt.Println("f64:", value)
 }
